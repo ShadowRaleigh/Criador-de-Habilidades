@@ -1,0 +1,388 @@
+[gd_resource type="Resource" script_class="TreeData" format=3]
+
+[ext_resource type="Script" path="res://RecursosGerais/node_data.gd" id="1_hrhg5"]
+[ext_resource type="Script" path="res://RecursosGerais/characteristic_data.gd" id="2_3adt6"]
+[ext_resource type="Script" path="res://RecursosGerais/tree_data.gd" id="3_3l2d5"]
+
+[sub_resource type="Resource" id="Resource_iu5ak"]
+script = ExtResource("2_3adt6")
+name = "Raiz Elemental"
+description = "Permite que a habilidade utilize um dos tipos de dano elemental padrão (Fogo, Água, Terra, Ar, Elétrico, Escuridão)"
+tree_floor = 1
+
+[sub_resource type="Resource" id="Resource_tdlf7"]
+script = ExtResource("1_hrhg5")
+node_name = &"Node_01"
+characteristic = SubResource("Resource_iu5ak")
+position_offset = Vector2i(400, 600)
+
+[sub_resource type="Resource" id="Resource_2sae2"]
+script = ExtResource("2_3adt6")
+name = "Raiz Física"
+description = "Permite que a habilidade utilize tipos de dano físico como Cortante, Perfurante ou Cntundente."
+tree_floor = 1
+
+[sub_resource type="Resource" id="Resource_ctvcm"]
+script = ExtResource("1_hrhg5")
+node_name = &"Node_02"
+characteristic = SubResource("Resource_2sae2")
+position_offset = Vector2i(400, 1200)
+
+[sub_resource type="Resource" id="Resource_a803b"]
+script = ExtResource("2_3adt6")
+name = "Modulação de Gume"
+description = "Converte obrigatoriamente o próximo dano causado pelo alvo em Cortante."
+material_cost = "Lâmina curta (100C)"
+cost_multiplier = 0.04999999999999716
+tree_floor = 2
+
+[sub_resource type="Resource" id="Resource_mqnsa"]
+script = ExtResource("1_hrhg5")
+node_name = &"Node_05"
+characteristic = SubResource("Resource_a803b")
+position_offset = Vector2i(800, 1250)
+
+[sub_resource type="Resource" id="Resource_n50kg"]
+script = ExtResource("2_3adt6")
+name = "Modulação de Ponta"
+description = "Converte obrigatoriamente o próximo dano causado pelo alvo em Perfurante."
+material_cost = "Ponta de diamante (100C)"
+cost_multiplier = 0.04999999999999716
+tree_floor = 2
+
+[sub_resource type="Resource" id="Resource_8xo4t"]
+script = ExtResource("1_hrhg5")
+node_name = &"Node_06"
+characteristic = SubResource("Resource_n50kg")
+position_offset = Vector2i(800, 1650)
+
+[sub_resource type="Resource" id="Resource_8001i"]
+script = ExtResource("2_3adt6")
+name = "Ruptura Colateral"
+description = "Ao atingir o alvo primário, a energia projeta um formato de cone de 1 metro atrás dele, causando 1 HitDie de dano do mesmo tipo."
+cost_multiplier = 0.15000000000000568
+tree_floor = 2
+
+[sub_resource type="Resource" id="Resource_kcoa5"]
+script = ExtResource("1_hrhg5")
+node_name = &"Node_07"
+characteristic = SubResource("Resource_8001i")
+position_offset = Vector2i(800, 450)
+
+[sub_resource type="Resource" id="Resource_ht2m7"]
+script = ExtResource("2_3adt6")
+name = "Transpassar"
+description = "Esta habilidade pode atingir até 2 alvos em uma linha reta dentro do seu alcance total."
+cost_multiplier = 0.21999999999999886
+tree_floor = 7
+
+[sub_resource type="Resource" id="Resource_ew565"]
+script = ExtResource("1_hrhg5")
+node_name = &"Node_14"
+characteristic = SubResource("Resource_ht2m7")
+position_offset = Vector2i(2800, 1650)
+
+[sub_resource type="Resource" id="Resource_55qq7"]
+script = ExtResource("2_3adt6")
+name = "Laceração Arterial"
+description = "O ataque abre feridas profundas que aplicam o estado Sangrando, fazendo o alvo receber dano igual a 10% da sua vida atual por turno."
+cost_multiplier = 0.37999999999999545
+min_tier = 2
+tree_floor = 10
+
+[sub_resource type="Resource" id="Resource_fkimp"]
+script = ExtResource("1_hrhg5")
+node_name = &"Node_17"
+characteristic = SubResource("Resource_55qq7")
+position_offset = Vector2i(4000, 1650)
+
+[sub_resource type="Resource" id="Resource_2agcf"]
+script = ExtResource("2_3adt6")
+name = "Salto de Condução"
+description = "Se a habilidade atingir uma criatura, a energia salta para o inimigo mais próximo em até 1,5 metro, causando 1 HitDie de dano elemental."
+cost_multiplier = 0.25
+tree_floor = 9
+
+[sub_resource type="Resource" id="Resource_jkdvb"]
+script = ExtResource("1_hrhg5")
+node_name = &"Node_16"
+characteristic = SubResource("Resource_2agcf")
+position_offset = Vector2i(3600, 250)
+
+[sub_resource type="Resource" id="Resource_uhrwf"]
+script = ExtResource("2_3adt6")
+name = "Retroalimentação Ígnea"
+description = "Ao utilizar esta habilidade, o usuário recebe o status Queimando com 3 HitDies de dano pela duração do efeito. Esta característica só pode ser integrada em habilidades com dano elemental de Fogo."
+material_cost = "Pedra de Magma (200C)"
+cost_multiplier = -0.18000000000000682
+tree_floor = 10
+
+[sub_resource type="Resource" id="Resource_btejg"]
+script = ExtResource("1_hrhg5")
+node_name = &"Node_19"
+characteristic = SubResource("Resource_uhrwf")
+position_offset = Vector2i(4000, 250)
+
+[sub_resource type="Resource" id="Resource_3ewi1"]
+script = ExtResource("2_3adt6")
+name = "Modulação de Impacto"
+description = "Converte obrigatoriamente o próximo dano causado pelo alvo em Contundente."
+material_cost = "Bola de Metal (100C)"
+cost_multiplier = 0.04999999999999716
+tree_floor = 2
+
+[sub_resource type="Resource" id="Resource_c3wvf"]
+script = ExtResource("1_hrhg5")
+node_name = &"Node_04"
+characteristic = SubResource("Resource_3ewi1")
+position_offset = Vector2i(800, 850)
+
+[sub_resource type="Resource" id="Resource_gbrw7"]
+script = ExtResource("2_3adt6")
+name = "Impacto de Estilhaços"
+description = "Se esta habilidade atingir o solo ou uma superfície sólida, cria uma zona de detritos na área ao redor do impacto que aplica Lentidão de 10% a qualquer um que se movimente nela. Esta característica só pode ser integrada em Habilidades Especiais."
+cost_multiplier = 0.09999999999999432
+tree_floor = 4
+
+[sub_resource type="Resource" id="Resource_3jkjj"]
+script = ExtResource("1_hrhg5")
+node_name = &"Node_08"
+characteristic = SubResource("Resource_gbrw7")
+position_offset = Vector2i(1600, 850)
+
+[sub_resource type="Resource" id="Resource_x41b0"]
+script = ExtResource("2_3adt6")
+name = "Passo da Lâmina"
+description = "Aumenta em +1 metro o alcance desta habilidade. Só pode ser aplicado se a habilidade causar dano do tipo Cortante."
+material_cost = "Bastão longo (50C)"
+cost_multiplier = 0.09999999999999432
+tree_floor = 6
+
+[sub_resource type="Resource" id="Resource_6alcy"]
+script = ExtResource("1_hrhg5")
+node_name = &"Node_11"
+characteristic = SubResource("Resource_x41b0")
+position_offset = Vector2i(2400, 1250)
+
+[sub_resource type="Resource" id="Resource_4hpgg"]
+script = ExtResource("2_3adt6")
+name = "Interceptação Reativa"
+description = "Até o fim do efeito, o usuário tenta defletir projéteis físicos que entrarem em seu alcance corpo a corpo (2m), fazendo o inimigo ter Desvantagem para acertar ataques à distância contra o usuário.
+Só pode ser usadas em habilidades com alvo Self"
+material_cost = "Lentes de Foco (100C)"
+cost_multiplier = 0.25
+tree_floor = 9
+
+[sub_resource type="Resource" id="Resource_c7pxp"]
+script = ExtResource("1_hrhg5")
+node_name = &"Node_15"
+characteristic = SubResource("Resource_4hpgg")
+position_offset = Vector2i(3600, 1250)
+
+[sub_resource type="Resource" id="Resource_32akx"]
+script = ExtResource("2_3adt6")
+name = "Solo Instável"
+description = "Se o ataque desta habilidade contra a defesa de Reflexos resultar em Acerto (Hit) ou superior, o alvo ou alvos na área ganham o status Caído.
+Só pode ser usada em habilidades em área"
+cost_multiplier = 0.18000000000000682
+tree_floor = 8
+
+[sub_resource type="Resource" id="Resource_rj5or"]
+script = ExtResource("1_hrhg5")
+node_name = &"Node_13"
+characteristic = SubResource("Resource_32akx")
+position_offset = Vector2i(3200, 850)
+
+[sub_resource type="Resource" id="Resource_c4txd"]
+script = ExtResource("2_3adt6")
+name = "Onda de Choque Elemental"
+description = "O impacto gera um deslocamento físico que empurra o alvo 1 metro para trás."
+cost_multiplier = 0.0799999999999983
+tree_floor = 5
+
+[sub_resource type="Resource" id="Resource_hv6b0"]
+script = ExtResource("1_hrhg5")
+node_name = &"Node_12"
+characteristic = SubResource("Resource_c4txd")
+position_offset = Vector2i(2000, 650)
+
+[sub_resource type="Resource" id="Resource_v3o0y"]
+script = ExtResource("2_3adt6")
+name = "Detonação de Resíduo"
+description = "Cria uma região elemental no impacto
+Ao fim da duração, causa 1 HitDie de dano na área da habilidade, do mesmo tipo do elemento que criou a área.
+Esta característica só pode ser integrada em Habilidades Especiais em área que causem dano elemental."
+cost_multiplier = 0.21999999999999886
+min_tier = 2
+tree_floor = 10
+
+[sub_resource type="Resource" id="Resource_tirny"]
+script = ExtResource("1_hrhg5")
+node_name = &"Node_18"
+characteristic = SubResource("Resource_v3o0y")
+position_offset = Vector2i(4000, 650)
+
+[sub_resource type="Resource" id="Resource_pj80a"]
+script = ExtResource("2_3adt6")
+name = "Raiz Tóxica"
+description = "Permite que a habilidade utilize o tipo de dano Venenoso."
+cost_multiplier = 0.04000000000000625
+tree_floor = 2
+
+[sub_resource type="Resource" id="Resource_1m1es"]
+script = ExtResource("1_hrhg5")
+node_name = &"Node_03"
+characteristic = SubResource("Resource_pj80a")
+position_offset = Vector2i(800, 2200)
+
+[sub_resource type="Resource" id="Resource_aigvr"]
+script = ExtResource("2_3adt6")
+type = 2
+name = "Resíduo Volátil"
+description = "A habilidade deixa uma zona de energia instável no local do impacto que aplica Lentidão de 10% a qualquer um que se movimente nela."
+cost_multiplier = 0.09999999999999432
+tree_floor = 3
+
+[sub_resource type="Resource" id="Resource_edfq4"]
+script = ExtResource("1_hrhg5")
+node_name = &"Node_09"
+characteristic = SubResource("Resource_aigvr")
+position_offset = Vector2i(1200, 650)
+
+[sub_resource type="Resource" id="Resource_7chos"]
+script = ExtResource("2_3adt6")
+type = 2
+name = "Penetração Inercial"
+description = "Esta habilidade atravessa obstáculos de até 0,5 metro de profundidade que não sejam de alta densidade como se não houvesse obstrução no caminho."
+material_cost = "Ácido Sulfúrico (50C)"
+cost_multiplier = 0.18000000000000682
+tree_floor = 4
+
+[sub_resource type="Resource" id="Resource_lukpq"]
+script = ExtResource("1_hrhg5")
+node_name = &"Node_10"
+characteristic = SubResource("Resource_7chos")
+position_offset = Vector2i(1600, 250)
+
+[sub_resource type="Resource" id="Resource_77da3"]
+script = ExtResource("2_3adt6")
+name = "Queimadura de Primeiro Grau"
+description = "Causa queimaduras de primeiro grau no alvo da habilidade.
+Aplica Queimadura, causando 1 HitDie pela duração da habilidade"
+material_cost = " Punhado de Pólvora (100C)"
+cost_multiplier = 0.09999999999999432
+tree_floor = 6
+
+[sub_resource type="Resource" id="Resource_1f223"]
+script = ExtResource("1_hrhg5")
+node_name = &"Node_60117"
+characteristic = SubResource("Resource_77da3")
+position_offset = Vector2i(2400, 250)
+
+[resource]
+script = ExtResource("3_3l2d5")
+name = "Destruição"
+nodes = Array[ExtResource("1_hrhg5")]([SubResource("Resource_tdlf7"), SubResource("Resource_ctvcm"), SubResource("Resource_mqnsa"), SubResource("Resource_8xo4t"), SubResource("Resource_kcoa5"), SubResource("Resource_ew565"), SubResource("Resource_fkimp"), SubResource("Resource_jkdvb"), SubResource("Resource_btejg"), SubResource("Resource_c3wvf"), SubResource("Resource_3jkjj"), SubResource("Resource_6alcy"), SubResource("Resource_c7pxp"), SubResource("Resource_rj5or"), SubResource("Resource_hv6b0"), SubResource("Resource_tirny"), SubResource("Resource_1m1es"), SubResource("Resource_edfq4"), SubResource("Resource_lukpq"), SubResource("Resource_1f223")])
+connections = Array[Dictionary]([{
+"from_node": &"Node_02",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"Node_04",
+"to_port": 0
+}, {
+"from_node": &"Node_02",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"Node_05",
+"to_port": 0
+}, {
+"from_node": &"Node_02",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"Node_06",
+"to_port": 0
+}, {
+"from_node": &"Node_01",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"Node_07",
+"to_port": 0
+}, {
+"from_node": &"Node_04",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"Node_08",
+"to_port": 0
+}, {
+"from_node": &"Node_07",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"Node_09",
+"to_port": 0
+}, {
+"from_node": &"Node_07",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"Node_10",
+"to_port": 0
+}, {
+"from_node": &"Node_05",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"Node_11",
+"to_port": 0
+}, {
+"from_node": &"Node_09",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"Node_12",
+"to_port": 0
+}, {
+"from_node": &"Node_08",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"Node_13",
+"to_port": 0
+}, {
+"from_node": &"Node_06",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"Node_14",
+"to_port": 0
+}, {
+"from_node": &"Node_11",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"Node_15",
+"to_port": 0
+}, {
+"from_node": &"Node_14",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"Node_17",
+"to_port": 0
+}, {
+"from_node": &"Node_12",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"Node_18",
+"to_port": 0
+}, {
+"from_node": &"Node_16",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"Node_19",
+"to_port": 0
+}, {
+"from_node": &"Node_10",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"Node_60117",
+"to_port": 0
+}, {
+"from_node": &"Node_60117",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"Node_16",
+"to_port": 0
+}])

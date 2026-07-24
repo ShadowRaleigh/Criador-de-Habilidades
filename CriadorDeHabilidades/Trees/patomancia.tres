@@ -1,0 +1,255 @@
+[gd_resource type="Resource" script_class="TreeData" format=3]
+
+[ext_resource type="Script" path="res://RecursosGerais/node_data.gd" id="1_qxjwo"]
+[ext_resource type="Script" path="res://RecursosGerais/characteristic_data.gd" id="2_vk5jl"]
+[ext_resource type="Script" path="res://RecursosGerais/tree_data.gd" id="3_r5ogu"]
+
+[sub_resource type="Resource" id="Resource_qxjwo"]
+script = ExtResource("2_vk5jl")
+type = 2
+name = "Gripezinha"
+description = "Você se infecta com uma variante de uma gripezinha. Provavelmente vai ficar tudo bem, provavelmente...
+Pelas próximas 8hrs, sua fortidude cai em 4 e você pode infectar outras pessoas. Essas outras pessoas também se recuperam em 8hrs"
+material_cost = "Asas de morcego (150C)"
+cost_multiplier = -0.15000000000000568
+tree_floor = 2
+
+[sub_resource type="Resource" id="Resource_vk5jl"]
+script = ExtResource("1_qxjwo")
+node_name = &"Node_7213"
+characteristic = SubResource("Resource_qxjwo")
+position_offset = Vector2i(800, 400)
+
+[sub_resource type="Resource" id="Resource_r5ogu"]
+script = ExtResource("2_vk5jl")
+type = 1
+name = "Repelir Vida"
+description = "Sua presença é desagradável para os vivos e seu toque é ardente.
+Pela duração da habilidade, qualquer ataque contra criaturas vivas alvo conta como atingir uma fraqueza "
+material_cost = "Bella Mortis (300C)"
+cost_multiplier = 0.4000000000000057
+min_tier = 2
+tree_floor = 10
+
+[sub_resource type="Resource" id="Resource_cai30"]
+script = ExtResource("1_qxjwo")
+node_name = &"Node_9527"
+characteristic = SubResource("Resource_r5ogu")
+position_offset = Vector2i(4000, 600)
+
+[sub_resource type="Resource" id="Resource_5fpc5"]
+script = ExtResource("2_vk5jl")
+name = "Palavra de Poder: Morte"
+description = "O alvo dessa habilidade tem apenas mais alguns momentos pra refletir em suas escolhas de vida.
+Mata a criatura alvo, se ela for de nível e status igual ou menor que o usuário"
+cost_multiplier = 1.0
+min_tier = 5
+tree_floor = 50
+
+[sub_resource type="Resource" id="Resource_8ygow"]
+script = ExtResource("1_qxjwo")
+node_name = &"Node_195639"
+characteristic = SubResource("Resource_5fpc5")
+position_offset = Vector2i(20000, 600)
+
+[sub_resource type="Resource" id="Resource_llqqx"]
+script = ExtResource("2_vk5jl")
+type = 1
+name = "Detectar Doenças"
+description = "Permite detectar a presença de qualquer patógeno ou coisas que atrapalhem a vida"
+material_cost = "Uréia Concentrada (100C)"
+cost_multiplier = 0.15000000000000568
+tree_floor = 2
+
+[sub_resource type="Resource" id="Resource_redrq"]
+script = ExtResource("1_qxjwo")
+node_name = &"Node_8101"
+characteristic = SubResource("Resource_llqqx")
+position_offset = Vector2i(800, 800)
+
+[sub_resource type="Resource" id="Resource_7k235"]
+script = ExtResource("2_vk5jl")
+type = 2
+name = "Peste Bubônica"
+description = "Ao usar uma habilidade de suporte, você se infecta com Peste Bubônica. 
+Pelas próximas 3hrs, seu HP diminui em 10% do restante a cada hora. Até você se recuperar, é possível infectar outros
+Os outros não se curam tão rápido quanto você..."
+material_cost = "Pelo de Gato (50C)"
+cost_multiplier = -0.29999999999999716
+tree_floor = 6
+
+[sub_resource type="Resource" id="Resource_4ntuv"]
+script = ExtResource("1_qxjwo")
+node_name = &"Node_1293867"
+characteristic = SubResource("Resource_7k235")
+position_offset = Vector2i(2400, 200)
+
+[sub_resource type="Resource" id="Resource_45mm7"]
+script = ExtResource("2_vk5jl")
+type = 2
+name = "Sensor de Vida"
+description = "Te permite detectar vida
+Em combate, te deixa detectar o HP restante dos alvos de forma vaga "
+cost_multiplier = 0.20000000000000284
+tree_floor = 4
+
+[sub_resource type="Resource" id="Resource_f2urd"]
+script = ExtResource("1_qxjwo")
+node_name = &"Node_27997"
+characteristic = SubResource("Resource_45mm7")
+position_offset = Vector2i(1600, 800)
+
+[sub_resource type="Resource" id="Resource_157f8"]
+script = ExtResource("2_vk5jl")
+name = "Infectar"
+description = "Permite que as suas habilidades causem dano venenoso"
+tree_floor = 1
+
+[sub_resource type="Resource" id="Resource_wvfny"]
+script = ExtResource("1_qxjwo")
+node_name = &"Node_159947"
+characteristic = SubResource("Resource_157f8")
+position_offset = Vector2i(400, 600)
+
+[sub_resource type="Resource" id="Resource_7gccg"]
+script = ExtResource("2_vk5jl")
+type = 2
+name = "Febril"
+description = "Pela próxima hora, o usuário vai ficar com febre, reduzindo a sua precisão em 5"
+cost_multiplier = -0.20000000000000284
+tree_floor = 4
+
+[sub_resource type="Resource" id="Resource_aoup1"]
+script = ExtResource("1_qxjwo")
+node_name = &"Node_1368807"
+characteristic = SubResource("Resource_7gccg")
+position_offset = Vector2i(1600, 400)
+
+[sub_resource type="Resource" id="Resource_bea0d"]
+script = ExtResource("2_vk5jl")
+type = 1
+name = "Anulador de Vida"
+description = "O alvo da habilidade temporariamente fica com os seus sinais vitais disfarçados. Pra um observador externo, não há nada que te diferencie de um morto desde que você fique parado"
+cost_multiplier = 0.15000000000000568
+tree_floor = 6
+
+[sub_resource type="Resource" id="Resource_tg2y0"]
+script = ExtResource("1_qxjwo")
+node_name = &"Node_1767229"
+characteristic = SubResource("Resource_bea0d")
+position_offset = Vector2i(2400, 1000)
+
+[sub_resource type="Resource" id="Resource_penti"]
+script = ExtResource("2_vk5jl")
+type = 2
+name = "Cicatrização Falha"
+description = "Os ferimentos do alvo não conseguem se curar corretamente
+Alvos recebem 10% menos cura por tier da habilidade, com um bônus de 5% se for de tier 4 e um de 20% se for de tier 5 "
+cost_multiplier = 0.29999999999999716
+tree_floor = 6
+
+[sub_resource type="Resource" id="Resource_33ckr"]
+script = ExtResource("1_qxjwo")
+node_name = &"Node_160563"
+characteristic = SubResource("Resource_penti")
+position_offset = Vector2i(2400, 600)
+
+[sub_resource type="Resource" id="Resource_xcyqc"]
+script = ExtResource("2_vk5jl")
+name = "Remediar"
+description = "Impede que os alvos da habilidade sejam infectados por doenças pelas próximas 8hrs"
+material_cost = "Penicillium (100C)"
+tree_floor = 7
+
+[sub_resource type="Resource" id="Resource_xq5wm"]
+script = ExtResource("1_qxjwo")
+node_name = &"Node_2351178"
+characteristic = SubResource("Resource_xcyqc")
+position_offset = Vector2i(2800, 1000)
+
+[sub_resource type="Resource" id="Resource_73ns1"]
+script = ExtResource("2_vk5jl")
+type = 2
+name = "Controle de Doenças"
+description = "Efeitos negativos de doença que deveriam atingir o usuário com o uso dessa habilidade agora podem afetar um alvo "
+cost_multiplier = 0.4000000000000057
+max_tier = 3
+tree_floor = 8
+
+[sub_resource type="Resource" id="Resource_xcour"]
+script = ExtResource("1_qxjwo")
+node_name = &"Node_158951"
+characteristic = SubResource("Resource_73ns1")
+position_offset = Vector2i(3200, 600)
+
+[resource]
+script = ExtResource("3_r5ogu")
+name = "Patomancia"
+nodes = Array[ExtResource("1_qxjwo")]([SubResource("Resource_vk5jl"), SubResource("Resource_cai30"), SubResource("Resource_8ygow"), SubResource("Resource_redrq"), SubResource("Resource_4ntuv"), SubResource("Resource_f2urd"), SubResource("Resource_wvfny"), SubResource("Resource_aoup1"), SubResource("Resource_tg2y0"), SubResource("Resource_33ckr"), SubResource("Resource_xq5wm"), SubResource("Resource_xcour")])
+connections = Array[Dictionary]([{
+"from_node": &"Node_8101",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"Node_27997",
+"to_port": 0
+}, {
+"from_node": &"Node_9527",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"Node_195639",
+"to_port": 0
+}, {
+"from_node": &"Node_159947",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"Node_7213",
+"to_port": 0
+}, {
+"from_node": &"Node_159947",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"Node_8101",
+"to_port": 0
+}, {
+"from_node": &"Node_27997",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"Node_158951",
+"to_port": 0
+}, {
+"from_node": &"Node_158951",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"Node_9527",
+"to_port": 0
+}, {
+"from_node": &"Node_7213",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"Node_1368807",
+"to_port": 0
+}, {
+"from_node": &"Node_1368807",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"Node_160563",
+"to_port": 0
+}, {
+"from_node": &"Node_1368807",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"Node_1293867",
+"to_port": 0
+}, {
+"from_node": &"Node_27997",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"Node_1767229",
+"to_port": 0
+}, {
+"from_node": &"Node_1767229",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"Node_2351178",
+"to_port": 0
+}])

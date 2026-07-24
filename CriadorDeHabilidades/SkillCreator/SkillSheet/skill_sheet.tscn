@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://cd5vnhw5rou5l"]
+
+[ext_resource type="Script" uid="uid://8u7wklk7k3qm" path="res://SkillCreator/SkillSheet/skill_sheet.gd" id="1_dbfwh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dbfwh"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_vmr2o"]
+font_size = 30
+font_color = Color(0, 0, 0, 1)
+
+[node name="SkillSheet" type="ColorRect" unique_id=1129994444]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.15294118, 0.15294118, 0.15294118, 0.12156863)
+script = ExtResource("1_dbfwh")
+metadata/_edit_use_anchors_ = true
+
+[node name="SheetPanel" type="PanelContainer" parent="." unique_id=1130157645]
+custom_minimum_size = Vector2(600, 600)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_dbfwh")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SheetPanel" unique_id=80170502]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="SheetPanel/VBoxContainer" unique_id=1643928552]
+layout_mode = 2
+text = "Ficha da Habilidade"
+label_settings = SubResource("LabelSettings_vmr2o")
+horizontal_alignment = 1
+
+[node name="ResultText" type="RichTextLabel" parent="SheetPanel/VBoxContainer" unique_id=1434589241]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SheetPanel/VBoxContainer" unique_id=1375048582]
+layout_mode = 2
+
+[node name="SaveTextButton" type="Button" parent="SheetPanel/VBoxContainer/HBoxContainer" unique_id=830296361]
+layout_mode = 2
+text = "Salvar .txt"
+
+[node name="SaveImageButton" type="Button" parent="SheetPanel/VBoxContainer/HBoxContainer" unique_id=715226094]
+layout_mode = 2
+text = "Salvar .png"
+
+[node name="SpaceFiller" type="Control" parent="SheetPanel/VBoxContainer/HBoxContainer" unique_id=708153880]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CloseButton" type="Button" parent="SheetPanel/VBoxContainer/HBoxContainer" unique_id=1982729738]
+layout_mode = 2
+text = "Fechar"
+
+[node name="TextFileDialog" type="FileDialog" parent="." unique_id=1684463679]
+access = 1
+filters = PackedStringArray("*.txt")
+
+[node name="ImageFileDialog" type="FileDialog" parent="." unique_id=815242648]
+access = 1
+filters = PackedStringArray("*.png")

@@ -1,0 +1,176 @@
+[gd_scene format=3 uid="uid://dkb646nqfmxfi"]
+
+[ext_resource type="Script" uid="uid://cjiv0xlwma1vd" path="res://SkillCreator/PlayerScreen/player_screen.gd" id="1_1wmu0"]
+[ext_resource type="PackedScene" uid="uid://c2gtlek1rrva2" path="res://SkillCreator/PlayerNode/player_node.tscn" id="2_oeibe"]
+[ext_resource type="PackedScene" uid="uid://cd5vnhw5rou5l" path="res://SkillCreator/SkillSheet/skill_sheet.tscn" id="3_xybrh"]
+
+[node name="PlayerScreen" type="Control" unique_id=1446850719]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1wmu0")
+player_node_scene = ExtResource("2_oeibe")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1833483943]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MapWindow" type="Control" parent="HBoxContainer" unique_id=1217029326]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TreeMap" type="Control" parent="HBoxContainer/MapWindow" unique_id=893072284]
+custom_minimum_size = Vector2(4000, 4000)
+layout_mode = 1
+anchors_preset = 0
+offset_right = 4000.0
+offset_bottom = 4000.0
+
+[node name="SidePanel" type="PanelContainer" parent="HBoxContainer" unique_id=572039009]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/SidePanel" unique_id=649709855]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="HBoxContainer/SidePanel/VBoxContainer" unique_id=940285525]
+layout_mode = 2
+
+[node name="SkillNameEdit" type="LineEdit" parent="HBoxContainer/SidePanel/VBoxContainer" unique_id=615667807]
+layout_mode = 2
+placeholder_text = "Skill Name"
+
+[node name="TypesLabel" type="Label" parent="HBoxContainer/SidePanel/VBoxContainer" unique_id=2133533672]
+layout_mode = 2
+
+[node name="CostFactorLabel" type="Label" parent="HBoxContainer/SidePanel/VBoxContainer" unique_id=604951025]
+layout_mode = 2
+
+[node name="FinalCostLabel" type="Label" parent="HBoxContainer/SidePanel/VBoxContainer" unique_id=899789983]
+layout_mode = 2
+
+[node name="MaterialCostLabel" type="Label" parent="HBoxContainer/SidePanel/VBoxContainer" unique_id=1184797196]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+autowrap_mode = 2
+
+[node name="TierBox" type="HBoxContainer" parent="HBoxContainer/SidePanel/VBoxContainer" unique_id=1032333110]
+layout_mode = 2
+
+[node name="TierLabel" type="Label" parent="HBoxContainer/SidePanel/VBoxContainer/TierBox" unique_id=1522805273]
+layout_mode = 2
+text = "Tier Desejado: "
+
+[node name="TierSpinBox" type="SpinBox" parent="HBoxContainer/SidePanel/VBoxContainer/TierBox" unique_id=2024896766]
+layout_mode = 2
+min_value = 1.0
+max_value = 5.0
+value = 1.0
+
+[node name="DefenseLabel" type="Label" parent="HBoxContainer/SidePanel/VBoxContainer/TierBox" unique_id=44216895]
+layout_mode = 2
+text = "Defesa"
+
+[node name="DefenseButton" type="OptionButton" parent="HBoxContainer/SidePanel/VBoxContainer/TierBox" unique_id=1113745350]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="HBoxContainer/SidePanel/VBoxContainer" unique_id=2036749833]
+layout_mode = 2
+columns = 2
+
+[node name="SynTypeLabel" type="Label" parent="HBoxContainer/SidePanel/VBoxContainer/GridContainer" unique_id=79046544]
+layout_mode = 2
+text = "Sincronia:"
+
+[node name="SyncTypeButton" type="OptionButton" parent="HBoxContainer/SidePanel/VBoxContainer/GridContainer" unique_id=1949082284]
+layout_mode = 2
+
+[node name="TargetTypeLabel" type="Label" parent="HBoxContainer/SidePanel/VBoxContainer/GridContainer" unique_id=949290615]
+layout_mode = 2
+text = "Alvo:"
+
+[node name="TargetTypeButton" type="OptionButton" parent="HBoxContainer/SidePanel/VBoxContainer/GridContainer" unique_id=567514453]
+layout_mode = 2
+
+[node name="AreaShapeLabel" type="Label" parent="HBoxContainer/SidePanel/VBoxContainer/GridContainer" unique_id=1484832463]
+layout_mode = 2
+
+[node name="AreaShapeButton" type="OptionButton" parent="HBoxContainer/SidePanel/VBoxContainer/GridContainer" unique_id=939896352]
+layout_mode = 2
+
+[node name="AreaSizeLabel" type="Label" parent="HBoxContainer/SidePanel/VBoxContainer/GridContainer" unique_id=973630438]
+layout_mode = 2
+
+[node name="AreaSizeSpinBox" type="SpinBox" parent="HBoxContainer/SidePanel/VBoxContainer/GridContainer" unique_id=470348250]
+layout_mode = 2
+max_value = 50.0
+
+[node name="SpeedLabel" type="Label" parent="HBoxContainer/SidePanel/VBoxContainer/GridContainer" unique_id=1024453912]
+layout_mode = 2
+text = "Velocidade"
+
+[node name="SpeedButton" type="OptionButton" parent="HBoxContainer/SidePanel/VBoxContainer/GridContainer" unique_id=981407597]
+layout_mode = 2
+
+[node name="RangeLabel" type="Label" parent="HBoxContainer/SidePanel/VBoxContainer/GridContainer" unique_id=798448964]
+layout_mode = 2
+text = "Alcance:"
+
+[node name="RangeButton" type="OptionButton" parent="HBoxContainer/SidePanel/VBoxContainer/GridContainer" unique_id=1688549277]
+layout_mode = 2
+
+[node name="DurationLabel" type="Label" parent="HBoxContainer/SidePanel/VBoxContainer/GridContainer" unique_id=1735390285]
+layout_mode = 2
+text = "Duração:"
+
+[node name="DurationButton" type="OptionButton" parent="HBoxContainer/SidePanel/VBoxContainer/GridContainer" unique_id=318534307]
+layout_mode = 2
+
+[node name="UsesLabel" type="Label" parent="HBoxContainer/SidePanel/VBoxContainer/GridContainer" unique_id=2117079033]
+layout_mode = 2
+text = "Usos:"
+
+[node name="UsesButton" type="OptionButton" parent="HBoxContainer/SidePanel/VBoxContainer/GridContainer" unique_id=1673649702]
+layout_mode = 2
+
+[node name="RecoveryLabel" type="Label" parent="HBoxContainer/SidePanel/VBoxContainer/GridContainer" unique_id=256110605]
+layout_mode = 2
+text = "Recuperação:"
+
+[node name="RecoveryButton" type="OptionButton" parent="HBoxContainer/SidePanel/VBoxContainer/GridContainer" unique_id=739646772]
+layout_mode = 2
+
+[node name="StatusLabel" type="Label" parent="HBoxContainer/SidePanel/VBoxContainer" unique_id=1270504664]
+layout_mode = 2
+
+[node name="FinishButton" type="Button" parent="HBoxContainer/SidePanel/VBoxContainer" unique_id=633382800]
+layout_mode = 2
+text = "Gerar Habilidade"
+
+[node name="Label" type="Label" parent="HBoxContainer/SidePanel/VBoxContainer" unique_id=1014389163]
+layout_mode = 2
+text = "Árvores Disponíveis"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/SidePanel/VBoxContainer" unique_id=873907633]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+
+[node name="TreeSelectorList" type="VBoxContainer" parent="HBoxContainer/SidePanel/VBoxContainer/ScrollContainer" unique_id=970712942]
+layout_mode = 2
+
+[node name="SkillSheet" parent="." unique_id=1129994444 instance=ExtResource("3_xybrh")]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5

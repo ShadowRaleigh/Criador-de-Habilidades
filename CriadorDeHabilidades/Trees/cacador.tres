@@ -1,0 +1,226 @@
+[gd_resource type="Resource" script_class="TreeData" format=3]
+
+[ext_resource type="Script" path="res://RecursosGerais/node_data.gd" id="1_c8ady"]
+[ext_resource type="Script" path="res://RecursosGerais/characteristic_data.gd" id="2_34jxd"]
+[ext_resource type="Script" path="res://RecursosGerais/tree_data.gd" id="3_gvnoe"]
+
+[sub_resource type="Resource" id="Resource_c8ady"]
+script = ExtResource("2_34jxd")
+type = 2
+name = "Chameleon"
+description = "Até o fim da duração da habilidade, o usuário consegue se disfaraçar no ambiente ao redor, concendendo vantagem em checks de Disfarce e um +2 em Disfarce"
+material_cost = "Sacos de Lula (500C)"
+cost_multiplier = 0.20000000000000284
+tree_floor = 7
+
+[sub_resource type="Resource" id="Resource_34jxd"]
+script = ExtResource("1_c8ady")
+node_name = &"Node_1282770"
+characteristic = SubResource("Resource_c8ady")
+position_offset = Vector2i(2800, 900)
+
+[sub_resource type="Resource" id="Resource_gvnoe"]
+script = ExtResource("2_34jxd")
+type = 2
+name = "Armador"
+description = "Você pode montar sua própria armadilha em um ponto. Se alguém passar por ali, vai ficar aprisionado até desarmar a armadilha
+Só pode ser usada como uma habilidade Simples"
+material_cost = "Corda e Cola (300C)"
+cost_multiplier = 0.20000000000000284
+max_tier = 1
+tree_floor = 5
+
+[sub_resource type="Resource" id="Resource_d1u0t"]
+script = ExtResource("1_c8ady")
+node_name = &"Node_1426665"
+characteristic = SubResource("Resource_gvnoe")
+position_offset = Vector2i(2000, 600)
+
+[sub_resource type="Resource" id="Resource_8c22p"]
+script = ExtResource("2_34jxd")
+type = 2
+name = "Sentido de Perigo"
+description = "Você consegue intuir facilmente se a área onde você está é segura pra descansar ou não"
+cost_multiplier = 0.29999999999999716
+tree_floor = 10
+
+[sub_resource type="Resource" id="Resource_01nbm"]
+script = ExtResource("1_c8ady")
+node_name = &"Node_1715068"
+characteristic = SubResource("Resource_8c22p")
+position_offset = Vector2i(4000, 1100)
+
+[sub_resource type="Resource" id="Resource_x1aww"]
+script = ExtResource("2_34jxd")
+type = 2
+name = "Identificar de Rastros"
+description = "Você consegue perceber se outras pessoas ou criaturas já passaram em algum lugar. Deve ser usado em uma habilidade em área "
+tree_floor = 1
+
+[sub_resource type="Resource" id="Resource_iqp34"]
+script = ExtResource("1_c8ady")
+node_name = &"Node_1280883"
+characteristic = SubResource("Resource_x1aww")
+position_offset = Vector2i(400, 600)
+
+[sub_resource type="Resource" id="Resource_yxlms"]
+script = ExtResource("2_34jxd")
+type = 2
+name = "Isca"
+description = "Prepara uma armadilha que tem grandes chances de atrair um animal selvagem"
+material_cost = "Carne Crua e Linha (50C)"
+cost_multiplier = 0.04999999999999716
+tree_floor = 2
+
+[sub_resource type="Resource" id="Resource_uu1ow"]
+script = ExtResource("1_c8ady")
+node_name = &"Node_1281949"
+characteristic = SubResource("Resource_yxlms")
+position_offset = Vector2i(800, 600)
+
+[sub_resource type="Resource" id="Resource_7s77j"]
+script = ExtResource("2_34jxd")
+type = 1
+name = "Passos Suaves"
+description = "Até o fim da duração da habilidade, permite movimento silencioso do usuário, concendendo vantagem em checks de Disfarce. 
+O alvo só pode ser o próprio usuário"
+cost_multiplier = 0.09999999999999432
+tree_floor = 1
+
+[sub_resource type="Resource" id="Resource_sukto"]
+script = ExtResource("1_c8ady")
+node_name = &"Node_1283507"
+characteristic = SubResource("Resource_7s77j")
+position_offset = Vector2i(400, 1200)
+
+[sub_resource type="Resource" id="Resource_daw5w"]
+script = ExtResource("2_34jxd")
+type = 2
+name = "Identificar Armadilhas"
+description = "Consegue identificar armadilhas em uma região ou objeto específico"
+cost_multiplier = 0.15000000000000568
+max_tier = 3
+tree_floor = 4
+
+[sub_resource type="Resource" id="Resource_5wq0y"]
+script = ExtResource("1_c8ady")
+node_name = &"Node_1285608"
+characteristic = SubResource("Resource_daw5w")
+position_offset = Vector2i(1600, 600)
+
+[sub_resource type="Resource" id="Resource_n885l"]
+script = ExtResource("2_34jxd")
+type = 2
+name = "Picada de Cobra"
+description = "O usuário fica envenenado. Pela próxima hora, a velocidade de movimentação é reduzida pela metade"
+material_cost = "Frasco de veneno (100C)"
+cost_multiplier = -0.15000000000000568
+tree_floor = 4
+
+[sub_resource type="Resource" id="Resource_00wit"]
+script = ExtResource("1_c8ady")
+node_name = &"Node_543272"
+characteristic = SubResource("Resource_n885l")
+position_offset = Vector2i(1600, 1800)
+
+[sub_resource type="Resource" id="Resource_a6l5n"]
+script = ExtResource("2_34jxd")
+type = 2
+name = "Letalidade"
+description = "Acertar uma fraqueza ou ponto fraco da criatura com essa habilidade conta como acerto crítico"
+cost_multiplier = 0.4000000000000057
+tree_floor = 12
+
+[sub_resource type="Resource" id="Resource_1ofgm"]
+script = ExtResource("1_c8ady")
+node_name = &"Node_879072"
+characteristic = SubResource("Resource_a6l5n")
+position_offset = Vector2i(4800, 700)
+
+[sub_resource type="Resource" id="Resource_7dd3x"]
+script = ExtResource("2_34jxd")
+type = 2
+name = "Identificação de Alvos"
+description = "Identifica um ponto fraco no inimigo. Acertar o ponto fraco causa desvantagem no acerto, porém, causa dano extra equivalente a acertar uma fraqueza do inimigo "
+cost_multiplier = 0.20000000000000284
+tree_floor = 4
+
+[sub_resource type="Resource" id="Resource_fxhkn"]
+script = ExtResource("1_c8ady")
+node_name = &"Node_2380696"
+characteristic = SubResource("Resource_7dd3x")
+position_offset = Vector2i(1600, 1200)
+
+[sub_resource type="Resource" id="Resource_ctyax"]
+script = ExtResource("2_34jxd")
+type = 1
+name = "Sobrevivencialismo"
+description = "Consegue identificar se algo é comestível ou não"
+cost_multiplier = 0.0799999999999983
+tree_floor = 3
+
+[sub_resource type="Resource" id="Resource_aswnp"]
+script = ExtResource("1_c8ady")
+node_name = &"Node_1490656"
+characteristic = SubResource("Resource_ctyax")
+position_offset = Vector2i(1200, 600)
+
+[resource]
+script = ExtResource("3_gvnoe")
+name = "Caçador"
+nodes = Array[ExtResource("1_c8ady")]([SubResource("Resource_34jxd"), SubResource("Resource_d1u0t"), SubResource("Resource_01nbm"), SubResource("Resource_iqp34"), SubResource("Resource_uu1ow"), SubResource("Resource_sukto"), SubResource("Resource_5wq0y"), SubResource("Resource_00wit"), SubResource("Resource_1ofgm"), SubResource("Resource_fxhkn"), SubResource("Resource_aswnp")])
+connections = Array[Dictionary]([{
+"from_node": &"Node_1282770",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"Node_1715068",
+"to_port": 0
+}, {
+"from_node": &"Node_1280883",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"Node_1281949",
+"to_port": 0
+}, {
+"from_node": &"Node_1281949",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"Node_1490656",
+"to_port": 0
+}, {
+"from_node": &"Node_1283507",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"Node_2380696",
+"to_port": 0
+}, {
+"from_node": &"Node_2380696",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"Node_1282770",
+"to_port": 0
+}, {
+"from_node": &"Node_1490656",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"Node_1285608",
+"to_port": 0
+}, {
+"from_node": &"Node_1285608",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"Node_1426665",
+"to_port": 0
+}, {
+"from_node": &"Node_1426665",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"Node_1282770",
+"to_port": 0
+}, {
+"from_node": &"Node_1282770",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"Node_879072",
+"to_port": 0
+}])

@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://c2gtlek1rrva2"]
+
+[ext_resource type="Script" uid="uid://dmkd8lk7wlnr3" path="res://SkillCreator/PlayerNode/player_node.gd" id="1_gdy2h"]
+
+[node name="PlayerNode" type="PanelContainer" unique_id=677024030]
+custom_minimum_size = Vector2(250, 0)
+offset_right = 200.0
+offset_bottom = 100.0
+script = ExtResource("1_gdy2h")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1850079636]
+layout_mode = 2
+
+[node name="NameLabel" type="Label" parent="VBoxContainer" unique_id=1666630929]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+size_flags_vertical = 3
+autowrap_mode = 2
+
+[node name="DescriptionLabel" type="Label" parent="VBoxContainer" unique_id=1733261602]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+size_flags_vertical = 3
+autowrap_mode = 2
+
+[node name="TypeLabel" type="Label" parent="VBoxContainer" unique_id=1139434675]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MaterialCostLabel" type="Label" parent="VBoxContainer" unique_id=1460141714]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+size_flags_vertical = 3
+autowrap_mode = 2
+
+[node name="CostLabel" type="Label" parent="VBoxContainer" unique_id=1649737371]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=576774931]
+layout_mode = 2
+
+[node name="MinTierLabel" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=2025502511]
+layout_mode = 2
+
+[node name="MaxTierLabel" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=460029130]
+layout_mode = 2
+size_flags_horizontal = 10
+
+[node name="Button" type="Button" parent="." unique_id=1055525537]
+modulate = Color(1, 1, 1, 0.003921569)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)

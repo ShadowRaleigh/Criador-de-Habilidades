@@ -1,0 +1,144 @@
+[gd_resource type="Resource" script_class="TreeData" format=3]
+
+[ext_resource type="Script" path="res://RecursosGerais/node_data.gd" id="1_icqu4"]
+[ext_resource type="Script" path="res://RecursosGerais/characteristic_data.gd" id="2_fbbyo"]
+[ext_resource type="Script" path="res://RecursosGerais/tree_data.gd" id="3_0um6o"]
+
+[sub_resource type="Resource" id="Resource_icqu4"]
+script = ExtResource("2_fbbyo")
+type = 2
+name = "Pequeno Anfíbio"
+description = "Capaz de produzir venenos de tier 1, um dos venenos mais fracos
+Armas e munições cobertas com venenos de tier 1 podem escolher entre causar seu dano normal ou causar dano venenosoi pela duração do veneno"
+material_cost = "Ovos de sapo (100C)"
+cost_multiplier = 0.09999999999999432
+tree_floor = 5
+
+[sub_resource type="Resource" id="Resource_fbbyo"]
+script = ExtResource("1_icqu4")
+node_name = &"Node_8416"
+characteristic = SubResource("Resource_icqu4")
+position_offset = Vector2i(2000, 200)
+
+[sub_resource type="Resource" id="Resource_0um6o"]
+script = ExtResource("2_fbbyo")
+type = 2
+name = "Licença de Alquimia"
+description = "Você pode usar características desbloqueadas em qualquer árvore e transformar elas em poções.
+Todas as receitas de poções precisam ser habilidades especiais, mas com 50% dos efeitos.
+Você só pode fazer poçoes comuns"
+material_cost = "Pote de Vidro pequeno"
+max_tier = 1
+tree_floor = 1
+
+[sub_resource type="Resource" id="Resource_36j2n"]
+script = ExtResource("1_icqu4")
+node_name = &"Node_4724"
+characteristic = SubResource("Resource_0um6o")
+position_offset = Vector2i(400, 0)
+
+[sub_resource type="Resource" id="Resource_ml1s8"]
+script = ExtResource("2_fbbyo")
+type = 2
+name = "A Curiosidade"
+description = "Você é capaz de identificar se algo pode ser usado como um ingrediente alquímico.
+Se identificar, você pode substituir um ingrediente semelhante em alguma receita"
+material_cost = "Olho de gato preto (50C)"
+cost_multiplier = 0.04000000000000625
+tree_floor = 2
+
+[sub_resource type="Resource" id="Resource_jfxig"]
+script = ExtResource("1_icqu4")
+node_name = &"Node_6836"
+characteristic = SubResource("Resource_ml1s8")
+position_offset = Vector2i(800, 0)
+
+[sub_resource type="Resource" id="Resource_vx14m"]
+script = ExtResource("2_fbbyo")
+type = 2
+name = "Aromaterapia"
+description = "Uma receita feita com essa característica pode aplicar a metade do seu efeito em uma área de tamanho compatível com o tier da receita uma vez gratuitamente"
+material_cost = "Gardenia Solar (1P)"
+cost_multiplier = 0.5
+min_tier = 2
+max_tier = 3
+tree_floor = 10
+
+[sub_resource type="Resource" id="Resource_hmvmm"]
+script = ExtResource("1_icqu4")
+node_name = &"Node_9382"
+characteristic = SubResource("Resource_vx14m")
+position_offset = Vector2i(4000, 0)
+
+[sub_resource type="Resource" id="Resource_0p7qw"]
+script = ExtResource("2_fbbyo")
+type = 2
+name = "Cabrito"
+description = "Você produz um antídotos de tier 1, capaz de neutralizar os venenos mais simples"
+material_cost = "Pequeno Bezoar (100C)"
+cost_multiplier = 0.09999999999999432
+max_tier = 1
+tree_floor = 4
+
+[sub_resource type="Resource" id="Resource_303qb"]
+script = ExtResource("1_icqu4")
+node_name = &"Node_7728"
+characteristic = SubResource("Resource_0p7qw")
+position_offset = Vector2i(1600, -200)
+
+[sub_resource type="Resource" id="Resource_jf5ft"]
+script = ExtResource("2_fbbyo")
+type = 2
+name = "Pequeno estudioso"
+description = "Agora, você pode fazer poções de tier 2"
+min_tier = 2
+max_tier = 2
+tree_floor = 6
+
+[sub_resource type="Resource" id="Resource_547o6"]
+script = ExtResource("1_icqu4")
+node_name = &"Node_1497704"
+characteristic = SubResource("Resource_jf5ft")
+position_offset = Vector2i(2400, 0)
+
+[resource]
+script = ExtResource("3_0um6o")
+name = "Alquimia"
+nodes = Array[ExtResource("1_icqu4")]([SubResource("Resource_fbbyo"), SubResource("Resource_36j2n"), SubResource("Resource_jfxig"), SubResource("Resource_hmvmm"), SubResource("Resource_303qb"), SubResource("Resource_547o6")])
+connections = Array[Dictionary]([{
+"from_node": &"Node_4724",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"Node_6836",
+"to_port": 0
+}, {
+"from_node": &"Node_6836",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"Node_7728",
+"to_port": 0
+}, {
+"from_node": &"Node_6836",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"Node_8416",
+"to_port": 0
+}, {
+"from_node": &"Node_7728",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"Node_1497704",
+"to_port": 0
+}, {
+"from_node": &"Node_8416",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"Node_1497704",
+"to_port": 0
+}, {
+"from_node": &"Node_1497704",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"Node_9382",
+"to_port": 0
+}])
